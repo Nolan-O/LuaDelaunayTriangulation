@@ -44,7 +44,7 @@ It's... reasonable, considering the language. Function inlining, real arrays, an
 
 These samples were taken from an in-game benchmark; point distribution is purely random from (0, 10,000]
 
-# Points | Time (s)
+Points Ct. | Time (s)
 ----- | -----
 55,000 | 16.3269
 45,000 | 11.8009
