@@ -58,4 +58,4 @@ Algorithm: [Ahmad Biniaz and Gholamhossein Dastghaibyfard. A faster circle-sweep
 
 QuadEdge spec: [Paul Heckbert](http://www.cs.cmu.edu/afs/andrew/scs/cs/15-463/2001/pub/src/a2/quadedge.html)
 
-Reference QuadEdge Usage (also derrived on Paul Heckbert's teachings): https://github.com/jtwaugh/Delaunay @jtwaugh
+Reference QuadEdge Usage @jtwaugh (also derrived on Paul Heckbert's teachings): https://github.com/jtwaugh/Delaunay
