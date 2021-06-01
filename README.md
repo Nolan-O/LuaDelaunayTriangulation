@@ -34,7 +34,7 @@ In blue is the triangulation; in red are the voronoi cells derived from it. The 
 
 ## Choice in algorithm:
 
-We initially used the classic Divide-and-Conquer delaunay algorithm, but persistent issues realted to ultra-high-aspect-ratio triangles on dense point sets (~28,000 points in a 2,000x2,000 square) could not be resolved; ultimately we concluded that Roblox's Luau optimizations were the cause. It's unknown if these issues would persist in other Lua environments. The Sweep-Circle algorithm was selected because it's unlikely to form such triangles, and indeed we do not run into this type of issue anymore.
+We initially used the classic Divide-and-Conquer delaunay algorithm, but persistent issues realted to ultra-high-aspect-ratio triangles on dense point sets (~3000 points in a 2,000x2,000 square) could not be resolved; ultimately we concluded that Roblox's Luau optimizations were the cause. It's unknown if these issues would persist in other Lua environments. The Sweep-Circle algorithm was selected because it's unlikely to form such triangles, and indeed we do not run into this type of issue anymore.
 
 This implementation is based on the Sweep-Circle algorithm in [this paper](https://cglab.ca/~biniaz/papers/Sweep%20Circle.pdf). We utilize the [QuadEdge data structure](http://www.cs.cmu.edu/afs/andrew/scs/cs/15-463/2001/pub/src/a2/quadedge.html) for navigating the triangulation's topology. Our specific implementation of QEdges comes from [this repository](https://github.com/jtwaugh/Delaunay), which in turn used the aformentioned QuadEdge page for its implementation.
 
