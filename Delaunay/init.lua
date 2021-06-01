@@ -109,7 +109,7 @@ end
 local VEdge = _G.require(script.VoronoiEdge)
 local VPoint = _G.require(script.VPoint)
 local Cell = _G.require(script.Cell)
-local function GetVoronoi(QEdges: Array<Edge>) : (Array<VCell>, Array<VEdge>, Array<QEdge>)
+local function GetVoronoi(QEdges: Array<Edge>) : (Array<VCell>, Array<VEdge>, FastArray, Array<VPoint>)
 	--The number of edges is 4x due to them being quad edges.
 	local VEdges: Array<VEdge> = table.create( #QEdges.Contents / 4 )
 	local VCells: Array<VCell> = table.create( #QEdges.Contents / 4 )
@@ -469,7 +469,7 @@ function Delaunay.Triangulate(points: Array<DPoint>)
 	return edges, O
 end
 
-function Delaunay.Voronoi(points: Array<DPoint>): (Array<VCell>, Array<VEdge>, PackedSparseArray, Array<VPoint>)
+function Delaunay.Voronoi(points: Array<DPoint>): (Array<VCell>, Array<VEdge>, FastArray, Array<VPoint>)
 	local triangulation, _ = Delaunay.Triangulate(points)
 
 	local Cells, Edges, QEdges, CircumCenters = GetVoronoi(triangulation)
