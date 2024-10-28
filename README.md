@@ -1,3 +1,7 @@
+## Notice: defunct project
+
+Now with much more experience in lua, I'd approach some things in this differently but do not want to rewrite it. Other delaunauy triangulators exist they are just less transparent about how they work, but are more reliable in the end.
+
 # Sweep-circle Delaunay Triangulation
 (and voroni diagrams)
 
